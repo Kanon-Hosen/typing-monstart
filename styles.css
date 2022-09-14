@@ -142,16 +142,17 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat( 3 , 1fr);
   justify-content: space-around;
+  gap: 20px;
 }
 
 .card {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -188,5 +189,8 @@ button {
   }
   .card {
     flex-direction: column;
+  }
+  #histories {
+    grid-template-columns: repeat( 1 , 1fr);
   }
 }
