@@ -10,7 +10,18 @@ body {
   background-position: left top;
   font-family: "Zilla Slab", serif;
 }
-
+nav{
+  text-align: center;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+nav a{
+  text-align: center;
+  font-size: 19px;
+  color: rgb(143, 135, 255);
+  font-weight: 600;
+  text-transform: uppercase;
+}
 .box-container {
   width: 70%;
   margin: 0 auto;
