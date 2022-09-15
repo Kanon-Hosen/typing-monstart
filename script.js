@@ -21,7 +21,6 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
-  // console.log(newLetter)
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -41,7 +40,6 @@ const typeController = (e) => {
   }
 
   userText += newLetter;
-  console.log(userText)
 
   const newLetterCorrect = validate(newLetter);
 
