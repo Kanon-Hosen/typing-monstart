@@ -73,7 +73,6 @@ const gameOver = () => {
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
   const timeTakenParse =Math.round(timeTaken)
-  // console.log(timeTaken)
 
   // show result modal
   resultModal.innerHTML = "";
@@ -107,32 +106,30 @@ const closeModal = () => {
 
 const start = () => {
   countdownOverlay.style.display = "flex";
-  // If already started, do not start again
-  // console.log(startTime)
   let count = 3;
 
   const startCountdown = setInterval(() => {
-
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
     // finished timer
     if (count === 0) {
-      // -------------- START TYPING -----------------
-      
+      // -------------- START TYPING -----------------      
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
       display.classList.remove("inactive");
       startTime = new Date().getTime();
       countdownOverlay.style.display = 'none'
-
+      countdownOverlay.innerHTML = '';
       clearInterval(startCountdown);
 
-    }
+    } 
     count--;
+
   }, 1000);
-   return;
+  
+  // If already started, do not start again
+  // if (startTime) return;
 
 };
-
+ 
 // START Countdown
 startBtn.addEventListener("click", start);
 
